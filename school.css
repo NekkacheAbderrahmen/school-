@@ -16,3 +16,15 @@ table{
     font-size: medium;
     margin-top:10%;
 }
+
+form, label{
+    margin-top: 10%;
+    color: blue;
+    font-size: medium;
+}
+
+#submit-button{
+    margin-top: 5%;
+    align-content: center;
+
+}
