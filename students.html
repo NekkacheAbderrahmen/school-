@@ -7,7 +7,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>à
 </head>
 <body>
 
@@ -33,31 +34,29 @@
 
         <div style="background-image: url('universite_de_cambridge.jpg');margin-top:5%;"> 
 
-            <table class="table-bordered" align="center">
-                <thead>
-                    <tr class="row" >
-                        <th class="col-sm-3">Nom complet</th>
-                        <th class="col-sm-3">Date de naissance</th>
-                        <th class="col-sm-3">Age</th>
-                        <th class="col-sm-3">Niveaux scolaire</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <table id='std_tab' class="table-bordered" align="center">
+                
+                <tr class="row" >
+                    <th class="col-sm-3">Complete name</th>
+                    <th class="col-sm-3">Age</th>
+                    <th class="col-sm-3">pecialité</th>
+                    <th class="col-sm-3">study level</th>
+                </tr>
                     
-                </tbody>
+                
             <table>
         </div>
 
 
         <form class="row">
-            <label class="col-sm-3">Nom complet</label>
-            <label class="col-sm-3" >Date de naissance</label>
-            <label class="col-sm-3">Age</label>
-            <label class="col-sm-3">Niveaux scolaire</label>
-            <input class="col-sm-3" type="text" name="fname">
-            <input class="col-sm-3" type="text" name="lname">
-            <input class="col-sm-3" type="text" name="lname">
-            <input class="col-sm-3" type="text" name="lname">
+            <label class="col-sm-3">complete name</label>
+            <label class="col-sm-3" >Age</label>
+            <label class="col-sm-3">speciality</label>
+            <label class="col-sm-3">study level</label>
+            <input class="col-sm-3" type="text" name="c_name">
+            <input class="col-sm-3" type="text" name="age">
+            <input class="col-sm-3" type="text" name="specility">
+            <input class="col-sm-3" type="text" name="s_level">
         </form> 
         <div class="text-center">
             <button id="submit-button" type="button" class="btn btn-success btn-lg">Ajouter</button>
@@ -65,7 +64,23 @@
     </div>
 
 
-
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA4qeWJPgvIuqkqtWdff7pnAegNqLqM3Xo",
+    authDomain: "school-2194a.firebaseapp.com",
+    databaseURL: "https://school-2194a.firebaseio.com",
+    projectId: "school-2194a",
+    storageBucket: "school-2194a.appspot.com",
+    messagingSenderId: "41023062051",
+    appId: "1:41023062051:web:d252822109e49c0a82f196",
+    measurementId: "G-85KD4YH32C"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db= firebase.firestore();
+  db.settings({ timestampsInSnapshots: true});
+</script>
 
 
     <script src="school.js"></script>

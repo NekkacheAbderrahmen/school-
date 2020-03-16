@@ -7,6 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+
     
 </head>
 <body>
@@ -33,17 +36,12 @@
 
         <div style="background-image: url('universite_de_cambridge.jpg');margin-top:5%;"> 
 
-            <table class="table-bordered" align="center">
-                <thead>
+            <table id="seance_tab" class="table-bordered" align="center">
                     <tr class="row" >
                         <th class="col-sm-4">Nom du module</th>
                         <th class="col-sm-4">Nom du prof</th>
                         <th class="col-sm-4">Date et heure</th>
                     </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
             <table>
         </div>
 
@@ -60,9 +58,26 @@
         </div>
     </div>
 
+    <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA4qeWJPgvIuqkqtWdff7pnAegNqLqM3Xo",
+    authDomain: "school-2194a.firebaseapp.com",
+    databaseURL: "https://school-2194a.firebaseio.com",
+    projectId: "school-2194a",
+    storageBucket: "school-2194a.appspot.com",
+    messagingSenderId: "41023062051",
+    appId: "1:41023062051:web:d252822109e49c0a82f196",
+    measurementId: "G-85KD4YH32C"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db= firebase.firestore();
+  db.settings({timestampsinsnapshots: true});
+</script>
 
 
-    <script src="school.js"></script>
+<script src="school.js"></script>
 
 </body>
 </html>
