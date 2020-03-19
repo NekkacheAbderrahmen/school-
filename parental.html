@@ -34,7 +34,7 @@
 
         <div style="background-image: url('universite_de_cambridge.jpg');margin-top:5%;"> 
 
-            <table id="prt_tab" class="table-bordered" align="center">
+            <table id="prt_tab" class="table table-striped table-dark" align="center">
                     <tr class="row" >
                         <th class="col-sm-3">Nom complet</th>
                         <th class="col-sm-3">Etudiant</th>
@@ -44,39 +44,37 @@
                 
             <table>
         </div>
-        <form class="row">
+        <form id="parental_form" class="row">
             <label class="col-sm-3">Nom complet</label>
             <label class="col-sm-3" >Etudiant</label>
             <label class="col-sm-3">Numero de Tel</label>
             <label class="col-sm-3">Adress</label>
-            <input class="col-sm-3" type="text" name="fname">
-            <input class="col-sm-3" type="text" name="lname">
-            <input class="col-sm-3" type="text" name="lname">
-            <input class="col-sm-3" type="text" name="lname">
-        </form> 
-        <div class="text-center">
-            <button id="submit-button" type="button" class="btn btn-success btn-lg">Ajouter</button>
-        </div>
+            <input class="col-sm-3" type="text" name="name" placeholder="enter the complete name">
+            <input class="col-sm-3" type="text" name="student" placeholder="enter the name of the student">
+            <input class="col-sm-3" type="text" name="tel" placeholder="enter the Tel number">
+            <input class="col-sm-3" type="text" name="adress" placeholder="enter the adress">
+            <button id="parental_button" type="button" class="btn btn-success btn-lg text-center ">Ajouter</button>
+        </form>
         
     </div>
 
     <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA4qeWJPgvIuqkqtWdff7pnAegNqLqM3Xo",
-    authDomain: "school-2194a.firebaseapp.com",
-    databaseURL: "https://school-2194a.firebaseio.com",
-    projectId: "school-2194a",
-    storageBucket: "school-2194a.appspot.com",
-    messagingSenderId: "41023062051",
-    appId: "1:41023062051:web:d252822109e49c0a82f196",
-    measurementId: "G-85KD4YH32C"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db= firebase.firestore();
-  db.settings({timestampsinsnapshots: true});
-</script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA4qeWJPgvIuqkqtWdff7pnAegNqLqM3Xo",
+            authDomain: "school-2194a.firebaseapp.com",
+            databaseURL: "https://school-2194a.firebaseio.com",
+            projectId: "school-2194a",
+            storageBucket: "school-2194a.appspot.com",
+            messagingSenderId: "41023062051",
+            appId: "1:41023062051:web:d252822109e49c0a82f196",
+            measurementId: "G-85KD4YH32C"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db= firebase.firestore();
+        db.settings({timestampsinsnapshots: true});
+   </script>
 
     <script src="school.js"></script>
 

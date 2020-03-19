@@ -34,7 +34,7 @@
 
         <div style="background-image: url('universite_de_cambridge.jpg');margin-top:5%;"> 
 
-            <table id="pack_tab" class="table-bordered" align="center">
+            <table id="pack_tab" class="table table-striped table-dark" align="center">
                     <tr class="row" >
                         <th class="col-sm-3">Nom du pack</th>
                         <th class="col-sm-3">Date de debut</th>
@@ -43,20 +43,17 @@
                     </tr>
             <table>
         </div>
-        <form class="row">
+        <form id="pack_form" class="row">
             <label class="col-sm-3">Nom du pack</label>
             <label class="col-sm-3" >Date de debu</label>
             <label class="col-sm-3">Date de fin</label>
             <label class="col-sm-3">Module</label>
-            <input class="col-sm-3" type="text" name="fname">
-            <input class="col-sm-3" type="text" name="lname">
-            <input class="col-sm-3" type="text" name="lname">
-            <input class="col-sm-3" type="text" name="lname">
+            <input class="col-sm-3" type="text" name="name">
+            <input class="col-sm-3" type="text" name="began_date">
+            <input class="col-sm-3" type="text" name="final_date">
+            <input class="col-sm-3" type="text" name="module">
+            <button id="pack_button" type="button" class="text-center btn btn-success btn-lg">Ajouter</button>
         </form> 
-        <div class="text-center">
-            <button id="submit-button" type="button" class="btn btn-success btn-lg">Ajouter</button>
-        </div>
-        
     </div>
 
     <script>

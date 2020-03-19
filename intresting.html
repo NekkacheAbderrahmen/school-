@@ -34,7 +34,7 @@
 
         <div style="background-image: url('universite_de_cambridge.jpg');margin-top:5%;"> 
 
-            <table id="intrs_tab" class="table-bordered" align="center">
+            <table id="intrs_tab" class="table table-striped table-dark" align="center">
                     <tr class="row" >
                         <th class="col-sm-6">Nom du module</th>
                         <th class="col-sm-6">periode de l'annéé</th>
@@ -42,16 +42,13 @@
             <table>
         </div>
 
-        <form class="row">
+        <form id="intresting_form" class="row">
             <label class="col-sm-6">Nom du module</label>
             <label class="col-sm-6" >Periode de l'annéé</label>
-            <input class="col-sm-6" type="text" name="fname">
-            <input class="col-sm-6" type="text" name="lname">
+            <input class="col-sm-6" type="text" name="name">
+            <input class="col-sm-6" type="text" name="season">
+            <button id="intresting_button" type="button" class="text-center btn btn-success btn-lg">Ajouter</button>
         </form> 
-        <div class="text-center">
-            <button id="submit-button" type="button" class="btn btn-success btn-lg">Ajouter</button>
-        </div>
-        
     </div>
 
     <script>

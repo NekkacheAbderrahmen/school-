@@ -34,7 +34,7 @@
 
         <div style="background-image: url('universite_de_cambridge.jpg');margin-top:5%;"> 
 
-            <table id='std_tab' class="table-bordered" align="center">
+            <table id='std_tab' class="table table-striped table-dark" align="center">
                 
                 <tr class="row" >
                     <th class="col-sm-3">Complete name</th>
@@ -48,19 +48,17 @@
         </div>
 
 
-        <form class="row">
+        <form  id="std_submit" class="row">
             <label class="col-sm-3">complete name</label>
             <label class="col-sm-3" >Age</label>
             <label class="col-sm-3">speciality</label>
             <label class="col-sm-3">study level</label>
-            <input class="col-sm-3" type="text" name="c_name">
-            <input class="col-sm-3" type="text" name="age">
-            <input class="col-sm-3" type="text" name="specility">
-            <input class="col-sm-3" type="text" name="s_level">
-        </form> 
-        <div class="text-center">
-            <button id="submit-button" type="button" class="btn btn-success btn-lg">Ajouter</button>
-        </div>
+            <input class="col-sm-3" type="text" name="c_name" placeholder="enter the complete name">
+            <input class="col-sm-3" type="text" name="age" placeholder="enter the age">
+            <input class="col-sm-3" type="text" name="specility" placeholder="enter the speciality">
+            <input class="col-sm-3" type="text" name="s_level" placeholder="enter the study level">
+            <button id="std_click" type="button" class="btn btn-success btn-lg">Ajouter</button>
+        </form>
     </div>
 
 
